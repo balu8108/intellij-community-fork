@@ -395,3 +395,10 @@ java_library(
   ]
 )
 ### auto-generated section `build intellij.idea.community.main.android` end
+
+java_test(
+    name = "JavaInfoTest",
+    srcs = ["JavaInfoTest.java"],
+    test_class = "JavaInfoTest",
+    deps = ["@lib//:junit4"],
+)

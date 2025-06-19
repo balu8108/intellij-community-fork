@@ -13,3 +13,7 @@ common:windows --disk_cache=~/AppData/Local/Temp/JetBrains/community-bazel-disk-
 
 # TeamCity-specific options
 common:teamcity --show_progress_rate_limit=30
+
+
+build --java_runtime_version=local_jdk
+build --java_language_version=17  # or whatever JBR version you're using
