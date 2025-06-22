@@ -194,7 +194,7 @@
       <reference ref="CutCopyPasteGroup"/>
       <separator/>
       <reference ref="FindUsages"/>
-      <reference ref="RefactoringMenu"/>
+      <!--<reference ref="RefactoringMenu"/>-->
       <separator/>
       <reference ref="Images.EditorToolbar"/>
       <reference ref="Images.ShowBorder"/>
@@ -229,7 +229,7 @@
       <reference ref="Images.ThumbnailsToolbar"/>
       <separator/>
       <reference ref="FindUsages"/>
-      <reference ref="RefactoringMenu"/>
+      <!--<reference ref="RefactoringMenu"/>-->
       <separator/>
       <reference ref="$Delete"/>
       <separator/>

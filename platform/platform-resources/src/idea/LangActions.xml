@@ -46,20 +46,20 @@
       <action id="ToggleRenderedDocPresentationForAll" class="com.intellij.codeInsight.documentation.render.ToggleRenderAllDocs"/>
     </group>
 
-    <group id="CodeInsightEditorActions">
-      <reference ref="LookupActions"/>
-      <action id="EmacsStyleIndent" class="com.intellij.codeInsight.editorActions.EmacsStyleIndentAction"/>
-      <action id="EditorCodeBlockStart" class="com.intellij.codeInsight.editorActions.CodeBlockStartAction"/>
-      <action id="EditorCodeBlockEnd" class="com.intellij.codeInsight.editorActions.CodeBlockEndAction"/>
-      <action id="EditorMatchBrace" class="com.intellij.codeInsight.editorActions.MatchBraceAction">
-        <add-to-group group-id="NavigateInFileGroup" anchor="after" relative-to-action="MethodUp"/>
-      </action>
-      <action id="EditorCodeBlockStartWithSelection" class="com.intellij.codeInsight.editorActions.CodeBlockStartWithSelectionAction"/>
-      <action id="EditorCodeBlockEndWithSelection" class="com.intellij.codeInsight.editorActions.CodeBlockEndWithSelectionAction"/>
-      <action id="EditorCompleteStatement" class="com.intellij.codeInsight.editorActions.smartEnter.SmartEnterAction"/>
+    <!--<group id="CodeInsightEditorActions">-->
+    <!--  <reference ref="LookupActions"/>-->
+    <!--  <action id="EmacsStyleIndent" class="com.intellij.codeInsight.editorActions.EmacsStyleIndentAction"/>-->
+    <!--  <action id="EditorCodeBlockStart" class="com.intellij.codeInsight.editorActions.CodeBlockStartAction"/>-->
+    <!--  <action id="EditorCodeBlockEnd" class="com.intellij.codeInsight.editorActions.CodeBlockEndAction"/>-->
+    <!--  <action id="EditorMatchBrace" class="com.intellij.codeInsight.editorActions.MatchBraceAction">-->
+    <!--    <add-to-group group-id="NavigateInFileGroup" anchor="after" relative-to-action="MethodUp"/>-->
+    <!--  </action>-->
+    <!--  <action id="EditorCodeBlockStartWithSelection" class="com.intellij.codeInsight.editorActions.CodeBlockStartWithSelectionAction"/>-->
+    <!--  <action id="EditorCodeBlockEndWithSelection" class="com.intellij.codeInsight.editorActions.CodeBlockEndWithSelectionAction"/>-->
+    <!--  <action id="EditorCompleteStatement" class="com.intellij.codeInsight.editorActions.smartEnter.SmartEnterAction"/>-->
 
-      <add-to-group group-id="EditorActions" anchor="last"/>
-    </group>
+    <!--  <add-to-group group-id="EditorActions" anchor="last"/>-->
+    <!--</group>-->
 
     <!-- File -->
 
@@ -87,9 +87,9 @@
     </group>
 
     <!-- Edit -->
-    <reference ref="EditorIndentSelection">
-      <add-to-group group-id="EditSmartGroup" anchor="before" relative-to-action="EditorUnindentSelection"/>
-    </reference>
+    <!--<reference ref="EditorIndentSelection">-->
+    <!--  <add-to-group group-id="EditSmartGroup" anchor="before" relative-to-action="EditorUnindentSelection"/>-->
+    <!--</reference>-->
 
     <action id="CopyReference" class="com.intellij.ide.actions.CopyReferenceAction">
       <add-to-group group-id="CopyReferencePopupGroup" anchor="after" relative-to-action="CopyExternalReferenceGroup"/>
@@ -281,25 +281,25 @@
     </group>
 
     <!-- Code -->
-    <group id="Floating.CodeToolbar" popup="false" searchable="false">
-      <group id="Floating.CodeToolbar.Extract" popup="true" class="com.intellij.ui.codeFloatingToolbar.RefactorDropdownActionGroup"
-             searchable="false" />
-      <group id="Floating.CodeToolbar.Surround" popup="true" class="com.intellij.ui.codeFloatingToolbar.RefactorDropdownActionGroup"
-             searchable="false">
-        <!--suppress PluginXmlCapitalization -->
-        <action id="Floating.CodeToolbar.SurroundWithTryCatch" class="com.intellij.codeInsight.generation.actions.SurroundWithActionBase" />
-        <!--suppress PluginXmlCapitalization -->
-        <action id="Floating.CodeToolbar.SurroundWithTryCatchFinally"
-                class="com.intellij.codeInsight.generation.actions.SurroundWithActionBase" />
-        <!--suppress PluginXmlCapitalization -->
-        <action id="Floating.CodeToolbar.SurroundWithIf" class="com.intellij.codeInsight.generation.actions.SurroundWithActionBase" />
-      </group>
-      <reference ref="XDebugger.Code.Toolbar"/>
-    </group>
+    <!--<group id="Floating.CodeToolbar" popup="false" searchable="false">-->
+    <!--  <group id="Floating.CodeToolbar.Extract" popup="true" class="com.intellij.ui.codeFloatingToolbar.RefactorDropdownActionGroup"-->
+    <!--         searchable="false" />-->
+    <!--  <group id="Floating.CodeToolbar.Surround" popup="true" class="com.intellij.ui.codeFloatingToolbar.RefactorDropdownActionGroup"-->
+    <!--         searchable="false">-->
+    <!--    &lt;!&ndash;suppress PluginXmlCapitalization &ndash;&gt;-->
+    <!--    <action id="Floating.CodeToolbar.SurroundWithTryCatch" class="com.intellij.codeInsight.generation.actions.SurroundWithActionBase" />-->
+    <!--    &lt;!&ndash;suppress PluginXmlCapitalization &ndash;&gt;-->
+    <!--    <action id="Floating.CodeToolbar.SurroundWithTryCatchFinally"-->
+    <!--            class="com.intellij.codeInsight.generation.actions.SurroundWithActionBase" />-->
+    <!--    &lt;!&ndash;suppress PluginXmlCapitalization &ndash;&gt;-->
+    <!--    <action id="Floating.CodeToolbar.SurroundWithIf" class="com.intellij.codeInsight.generation.actions.SurroundWithActionBase" />-->
+    <!--  </group>-->
+    <!--  <reference ref="XDebugger.Code.Toolbar"/>-->
+    <!--</group>-->
 
-    <action id="CodeFloatingToolbar.GotoNextMenu" class="com.intellij.ui.codeFloatingToolbar.GotoNextFloatingToolbarMenu" />
-    <action id="CodeFloatingToolbar.GotoPrevMenu" class="com.intellij.ui.codeFloatingToolbar.GotoPreviousFloatingToolbarMenu" />
-    <action id="Floating.CodeToolbar.Disable" class="com.intellij.ui.codeFloatingToolbar.DisableCodeFloatingToolbarAction" />
+    <!--<action id="CodeFloatingToolbar.GotoNextMenu" class="com.intellij.ui.codeFloatingToolbar.GotoNextFloatingToolbarMenu" />-->
+    <!--<action id="CodeFloatingToolbar.GotoPrevMenu" class="com.intellij.ui.codeFloatingToolbar.GotoPreviousFloatingToolbarMenu" />-->
+    <!--<action id="Floating.CodeToolbar.Disable" class="com.intellij.ui.codeFloatingToolbar.DisableCodeFloatingToolbarAction" />-->
 
     <group id="InlineCompletion" popup="true">
       <action id="CallInlineCompletionAction" class="com.intellij.codeInsight.inline.completion.CallInlineCompletionAction">
@@ -330,23 +330,23 @@
       <action id="Generate" class="com.intellij.codeInsight.generation.actions.GenerateAction"/>
       <separator/>
 
-      <group id="CodeCompletionGroup" class="com.intellij.codeInsight.completion.actions.CodeCompletionGroup" popup="true">
-        <action id="CodeCompletion" class="com.intellij.codeInsight.completion.actions.CodeCompletionAction"/>
-        <action id="SmartTypeCompletion" class="com.intellij.codeInsight.completion.actions.SmartCodeCompletionAction">
-          <synonym key="action.SmartTypeCompletion.synonym"/>
-          <synonym key="action.SmartTypeCompletion.synonym2"/>
-        </action>
-        <separator/>
-        <reference ref="EditorCompleteStatement"/>
-        <separator/>
-        <action id="HippieCompletion" class="com.intellij.codeInsight.completion.actions.HippieCompletionAction"/>
-        <action id="HippieBackwardCompletion" class="com.intellij.codeInsight.completion.actions.HippieBackwardCompletionAction"/>
-        <separator/>
-        <reference ref="CallInlineCompletionAction"/>
-        <reference ref="InsertInlineCompletionAction"/>
-        <reference ref="InsertInlineCompletionWordAction"/>
-        <reference ref="InsertInlineCompletionLineAction"/>
-      </group>
+      <!--<group id="CodeCompletionGroup" class="com.intellij.codeInsight.completion.actions.CodeCompletionGroup" popup="true">-->
+      <!--  <action id="CodeCompletion" class="com.intellij.codeInsight.completion.actions.CodeCompletionAction"/>-->
+      <!--  <action id="SmartTypeCompletion" class="com.intellij.codeInsight.completion.actions.SmartCodeCompletionAction">-->
+      <!--    <synonym key="action.SmartTypeCompletion.synonym"/>-->
+      <!--    <synonym key="action.SmartTypeCompletion.synonym2"/>-->
+      <!--  </action>-->
+      <!--  <separator/>-->
+      <!--  <reference ref="EditorCompleteStatement"/>-->
+      <!--  <separator/>-->
+      <!--  <action id="HippieCompletion" class="com.intellij.codeInsight.completion.actions.HippieCompletionAction"/>-->
+      <!--  <action id="HippieBackwardCompletion" class="com.intellij.codeInsight.completion.actions.HippieBackwardCompletionAction"/>-->
+      <!--  <separator/>-->
+      <!--  <reference ref="CallInlineCompletionAction"/>-->
+      <!--  <reference ref="InsertInlineCompletionAction"/>-->
+      <!--  <reference ref="InsertInlineCompletionWordAction"/>-->
+      <!--  <reference ref="InsertInlineCompletionLineAction"/>-->
+      <!--</group>-->
 
       <group id="InspectCodeInCodeMenuGroup">
         <separator/>
@@ -425,24 +425,24 @@
 
       <separator/>
 
-      <group id="CommentGroup">
-        <action id="CommentByLineComment" class="com.intellij.codeInsight.generation.actions.CommentByLineCommentAction"
-                icon="AllIcons.Actions.InlayRenameInComments">
-          <add-to-group group-id="Floating.CodeToolbar" anchor="after" relative-to-action="Floating.CodeToolbar.Surround" />
-        </action>
-        <action id="CommentByBlockComment" class="com.intellij.codeInsight.generation.actions.CommentByBlockCommentAction"/>
-      </group>
+      <!--<group id="CommentGroup">-->
+      <!--  <action id="CommentByLineComment" class="com.intellij.codeInsight.generation.actions.CommentByLineCommentAction"-->
+      <!--          icon="AllIcons.Actions.InlayRenameInComments">-->
+      <!--    <add-to-group group-id="Floating.CodeToolbar" anchor="after" relative-to-action="Floating.CodeToolbar.Surround" />-->
+      <!--  </action>-->
+      <!--  <action id="CommentByBlockComment" class="com.intellij.codeInsight.generation.actions.CommentByBlockCommentAction"/>-->
+      <!--</group>-->
 
-      <group id="CodeFormatGroup">
-        <action id="ReformatCode" class="com.intellij.codeInsight.actions.ReformatCodeAction" icon="AllIcons.Actions.ReformatCode">
-          <add-to-group group-id="Floating.CodeToolbar" anchor="after" relative-to-action="CommentByLineComment" />
-          <synonym key="action.ReformatCode.synonym1"/>
-        </action>
-        <action id="ShowReformatFileDialog" class="com.intellij.codeInsight.actions.ShowReformatFileDialog"/>
-        <action id="AutoIndentLines" class="com.intellij.codeInsight.generation.actions.AutoIndentLinesAction"/>
-        <action id="OptimizeImports" class="com.intellij.codeInsight.actions.OptimizeImportsAction"/>
-        <action id="RearrangeCode" class="com.intellij.application.options.codeStyle.arrangement.action.RearrangeCodeAction"/>
-      </group>
+      <!--<group id="CodeFormatGroup">-->
+      <!--  <action id="ReformatCode" class="com.intellij.codeInsight.actions.ReformatCodeAction" icon="AllIcons.Actions.ReformatCode">-->
+      <!--    <add-to-group group-id="Floating.CodeToolbar" anchor="after" relative-to-action="CommentByLineComment" />-->
+      <!--    <synonym key="action.ReformatCode.synonym1"/>-->
+      <!--  </action>-->
+      <!--  <action id="ShowReformatFileDialog" class="com.intellij.codeInsight.actions.ShowReformatFileDialog"/>-->
+      <!--  <action id="AutoIndentLines" class="com.intellij.codeInsight.generation.actions.AutoIndentLinesAction"/>-->
+      <!--  <action id="OptimizeImports" class="com.intellij.codeInsight.actions.OptimizeImportsAction"/>-->
+      <!--  <action id="RearrangeCode" class="com.intellij.application.options.codeStyle.arrangement.action.RearrangeCodeAction"/>-->
+      <!--</group>-->
 
       <separator/>
       <action id="MoveStatementDown" class="com.intellij.codeInsight.editorActions.moveUpDown.MoveStatementDownAction"/>
@@ -475,47 +475,47 @@
     <action id="CodeVisionToggleAction" class="com.intellij.codeInsight.hints.codeVision.CodeVisionToggleAction" />
 
     <!-- Refactor -->
-    <group id="RefactoringMenu" popup="true">
-    <action id="Refactorings.QuickListPopupAction" class="com.intellij.refactoring.actions.RefactoringQuickListPopupAction"/>
-      <action id="RenameElement" class="com.intellij.refactoring.actions.RenameElementAction"/>
-      <action id="ChangeSignature" class="com.intellij.refactoring.actions.ChangeSignatureAction"/>
-      <separator/>
-      <group id="IntroduceActionsGroup" popup="true" class="com.intellij.ide.actions.PopupInMainMenuActionGroup">
-        <action id="IntroduceVariable" class="com.intellij.refactoring.actions.IntroduceVariableAction">
-          <add-to-group group-id="Floating.CodeToolbar.Extract" />
-        </action>
-        <action id="IntroduceConstant" class="com.intellij.refactoring.actions.IntroduceConstantAction">
-          <add-to-group group-id="Floating.CodeToolbar.Extract" />
-        </action>
-        <action id="IntroduceField" class="com.intellij.refactoring.actions.IntroduceFieldAction"/>
-        <action id="IntroduceParameter" class="com.intellij.refactoring.actions.IntroduceParameterAction">
-          <add-to-group group-id="Floating.CodeToolbar.Extract" />
-        </action>
-        <separator/>
-        <action id="IntroduceParameterObject" class="com.intellij.refactoring.actions.IntroduceParameterObjectAction"/>
-        <separator/>
-        <action id="ExtractMethod" class="com.intellij.refactoring.actions.ExtractMethodAction">
-          <add-to-group group-id="Floating.CodeToolbar.Extract" anchor="first" />
-        </action>
-        <separator/>
-        <action id="ExtractClass" class="com.intellij.refactoring.actions.ExtractClassAction"/>
-        <action id="ExtractInclude" class="com.intellij.refactoring.actions.ExtractIncludeAction"/>
-        <action id="ExtractInterface" class="com.intellij.refactoring.actions.ExtractInterfaceAction"/>
-        <action id="ExtractSuperclass" class="com.intellij.refactoring.actions.ExtractSuperclassAction"/>
-        <action id="ExtractModule" class="com.intellij.refactoring.actions.ExtractModuleAction"/>
-      </group>
-      <action id="Inline" class="com.intellij.refactoring.actions.InlineAction"/>
-      <separator/>
-      <action id="Move" class="com.intellij.refactoring.actions.MoveAction"/>
-      <action id="CopyElement" class="com.intellij.ide.actions.CopyElementAction"/>
-      <action id="SafeDelete" class="com.intellij.refactoring.actions.SafeDeleteAction"/>
-      <separator/>
+    <!--<group id="RefactoringMenu" popup="true">-->
+    <!--<action id="Refactorings.QuickListPopupAction" class="com.intellij.refactoring.actions.RefactoringQuickListPopupAction"/>-->
+    <!--  <action id="RenameElement" class="com.intellij.refactoring.actions.RenameElementAction"/>-->
+    <!--  <action id="ChangeSignature" class="com.intellij.refactoring.actions.ChangeSignatureAction"/>-->
+    <!--  <separator/>-->
+    <!--  <group id="IntroduceActionsGroup" popup="true" class="com.intellij.ide.actions.PopupInMainMenuActionGroup">-->
+    <!--    <action id="IntroduceVariable" class="com.intellij.refactoring.actions.IntroduceVariableAction">-->
+    <!--      <add-to-group group-id="Floating.CodeToolbar.Extract" />-->
+    <!--    </action>-->
+    <!--    <action id="IntroduceConstant" class="com.intellij.refactoring.actions.IntroduceConstantAction">-->
+    <!--      <add-to-group group-id="Floating.CodeToolbar.Extract" />-->
+    <!--    </action>-->
+    <!--    <action id="IntroduceField" class="com.intellij.refactoring.actions.IntroduceFieldAction"/>-->
+    <!--    <action id="IntroduceParameter" class="com.intellij.refactoring.actions.IntroduceParameterAction">-->
+    <!--      <add-to-group group-id="Floating.CodeToolbar.Extract" />-->
+    <!--    </action>-->
+    <!--    <separator/>-->
+    <!--    <action id="IntroduceParameterObject" class="com.intellij.refactoring.actions.IntroduceParameterObjectAction"/>-->
+    <!--    <separator/>-->
+    <!--    <action id="ExtractMethod" class="com.intellij.refactoring.actions.ExtractMethodAction">-->
+    <!--      <add-to-group group-id="Floating.CodeToolbar.Extract" anchor="first" />-->
+    <!--    </action>-->
+    <!--    <separator/>-->
+    <!--    <action id="ExtractClass" class="com.intellij.refactoring.actions.ExtractClassAction"/>-->
+    <!--    <action id="ExtractInclude" class="com.intellij.refactoring.actions.ExtractIncludeAction"/>-->
+    <!--    <action id="ExtractInterface" class="com.intellij.refactoring.actions.ExtractInterfaceAction"/>-->
+    <!--    <action id="ExtractSuperclass" class="com.intellij.refactoring.actions.ExtractSuperclassAction"/>-->
+    <!--    <action id="ExtractModule" class="com.intellij.refactoring.actions.ExtractModuleAction"/>-->
+    <!--  </group>-->
+    <!--  <action id="Inline" class="com.intellij.refactoring.actions.InlineAction"/>-->
+    <!--  <separator/>-->
+    <!--  <action id="Move" class="com.intellij.refactoring.actions.MoveAction"/>-->
+    <!--  <action id="CopyElement" class="com.intellij.ide.actions.CopyElementAction"/>-->
+    <!--  <action id="SafeDelete" class="com.intellij.refactoring.actions.SafeDeleteAction"/>-->
+    <!--  <separator/>-->
 
-      <action id="MembersPullUp" class="com.intellij.refactoring.actions.PullUpAction"/>
-      <action id="MemberPushDown" class="com.intellij.refactoring.actions.PushDownAction"/>
-      <action id="InvertBoolean" class="com.intellij.refactoring.actions.InvertBooleanAction"/>
-      <add-to-group group-id="MainMenu" anchor="after" relative-to-action="CodeMenu"/>
-    </group>
+    <!--  <action id="MembersPullUp" class="com.intellij.refactoring.actions.PullUpAction"/>-->
+    <!--  <action id="MemberPushDown" class="com.intellij.refactoring.actions.PushDownAction"/>-->
+    <!--  <action id="InvertBoolean" class="com.intellij.refactoring.actions.InvertBooleanAction"/>-->
+    <!--  <add-to-group group-id="MainMenu" anchor="after" relative-to-action="CodeMenu"/>-->
+    <!--</group>-->
 
     <!-- Tools -->
     <group id="ToolsBasicGroup">
@@ -563,8 +563,8 @@
 
     <group id="NavBarToolBarOthers"/>
     <group id="NavBarToolBar">
-      <reference ref="ToolbarRunGroup"/>
-      <separator/>
+      <!--<reference ref="ToolbarRunGroup"/>-->
+      <!--<separator/>-->
       <reference ref="NavBarVcsGroup"/>
       <separator/>
       <reference ref="NavBarToolBarOthers"/>
@@ -586,20 +586,20 @@
       </group>
     </group>
 
-    <group id="ProjectViewPopupMenuRefactoringGroup" compact="true">
-      <reference ref="RefactoringMenu"/>
-    </group>
+    <!--<group id="ProjectViewPopupMenuRefactoringGroup" compact="true">-->
+    <!--  <reference ref="RefactoringMenu"/>-->
+    <!--</group>-->
 
-    <group id="ProjectViewPopupMenuModifyGroup">
-      <reference ref="ReformatCode"/>
-      <reference ref="OptimizeImports"/>
-      <reference ref="$Delete"/>
-      <reference ref="Scratch.ChangeLanguage"/>
-      <group id="MarkFileAs">
-        <action id="OverrideFileTypeAction" class="com.intellij.openapi.file.exclude.OverrideFileTypeAction"/>
-        <action id="ReverteOverrideFileTypeAction" class="com.intellij.openapi.file.exclude.ReverteOverrideFileTypeAction"/>
-      </group>
-    </group>
+    <!--<group id="ProjectViewPopupMenuModifyGroup">-->
+    <!--  <reference ref="ReformatCode"/>-->
+    <!--  <reference ref="OptimizeImports"/>-->
+    <!--  <reference ref="$Delete"/>-->
+    <!--  <reference ref="Scratch.ChangeLanguage"/>-->
+    <!--  <group id="MarkFileAs">-->
+    <!--    <action id="OverrideFileTypeAction" class="com.intellij.openapi.file.exclude.OverrideFileTypeAction"/>-->
+    <!--    <action id="ReverteOverrideFileTypeAction" class="com.intellij.openapi.file.exclude.ReverteOverrideFileTypeAction"/>-->
+    <!--  </group>-->
+    <!--</group>-->
 
     <group id="ProjectViewPopupMenuSettingsGroup">
       <group id="MarkRootGroup" class="com.intellij.ide.projectView.actions.MarkRootGroup" popup="true">
@@ -618,12 +618,12 @@
       <reference ref="FindInPath"/>
       <reference ref="ReplaceInPath"/>
       <separator/>
-      <reference ref="RenameElement"/>
-      <reference ref="ProjectViewPopupMenuRefactoringGroup"/>
+      <!--<reference ref="RenameElement"/>-->
+      <!--<reference ref="ProjectViewPopupMenuRefactoringGroup"/>-->
+      <!--<separator/>-->
+      <!--<reference ref="ProjectViewPopupMenuModifyGroup"/>-->
       <separator/>
-      <reference ref="ProjectViewPopupMenuModifyGroup"/>
-      <separator/>
-      <reference ref="ProjectViewPopupMenuRunGroup"/>
+      <!--<reference ref="ProjectViewPopupMenuRunGroup"/>-->
       <reference ref="SplitRevealGroup"/>
       <separator/>
       <reference ref="VersionControlsGroup"/>
@@ -673,12 +673,12 @@
       <reference ref="FindInPath"/>
       <reference ref="ReplaceInPath"/>
       <separator/>
-      <reference ref="RenameElement"/>
-      <reference ref="ProjectViewPopupMenuRefactoringGroup"/>
-      <separator/>
-      <reference ref="ProjectViewPopupMenuModifyGroup"/>
-      <separator/>
-      <reference ref="ProjectViewPopupMenuRunGroup"/>
+      <!--<reference ref="RenameElement"/>-->
+      <!--<reference ref="ProjectViewPopupMenuRefactoringGroup"/>-->
+      <!--<separator/>-->
+      <!--<reference ref="ProjectViewPopupMenuModifyGroup"/>-->
+      <!--<separator/>-->
+      <!--<reference ref="ProjectViewPopupMenuRunGroup"/>-->
       <reference ref="SplitRevealGroup"/>
       <separator/>
       <reference ref="VersionControlsGroup"/>
@@ -796,12 +796,12 @@
       <reference ref="EditSource"/>
       <separator/>
       <reference ref="FindUsages"/>
-      <reference ref="RenameElement"/>
-      <reference ref="RefactoringMenu"/>
+      <!--<reference ref="RenameElement"/>-->
+      <!--<reference ref="RefactoringMenu"/>-->
       <separator/>
       <reference ref="CutCopyPasteGroup"/>
       <separator/>
-      <reference ref="RunContextPopupGroup"/>
+      <!--<reference ref="RunContextPopupGroup"/>-->
       <reference ref="SplitRevealGroup"/>
       <reference ref="VersionControlsGroup"/>
       <separator/>
@@ -826,14 +826,14 @@
 
     <group id="EditorLangPopupMenu">
       <separator/>
-      <reference ref="RenameElement"/>
-      <reference ref="RefactoringMenu"/>
+      <!--<reference ref="RenameElement"/>-->
+      <!--<reference ref="RefactoringMenu"/>-->
       <reference ref="Generate"/>
       <separator/>
 
-      <group id="EditorPopupMenu.Run">
-        <reference ref="RunContextPopupGroup"/>
-      </group>
+      <!--<group id="EditorPopupMenu.Run">-->
+      <!--  <reference ref="RunContextPopupGroup"/>-->
+      <!--</group>-->
       <reference ref="SplitRevealGroup"/>
       <separator/>
       <reference ref="VersionControlsGroup"/>
@@ -847,9 +847,9 @@
       <separator/>
       <reference ref="Scratch.ChangeLanguage"/>
       <reference ref="AssociateWithFileType"/>
-      <reference ref="MarkFileAs"/>
+      <!--<reference ref="MarkFileAs"/>-->
       <separator/>
-      <reference ref="RunContextPopupGroup"/>
+      <!--<reference ref="RunContextPopupGroup"/>-->
       <reference ref="SplitRevealGroup"/>
       <separator/>
       <reference ref="VersionControlsGroup"/>
@@ -864,20 +864,20 @@
       <action id="UsageView.Exclude" class="com.intellij.ide.actions.exclusion.ExcludeTreeNodeAction" use-shortcut-of="$Delete"/>
     </group>
 
-    <group id="UsageView.Popup">
-      <action id="UsageView.Rerun" class="com.intellij.usages.actions.RerunSearchAction" icon="AllIcons.Actions.Refresh" use-shortcut-of="Rerun"/>
-      <separator/>
-      <reference ref="EditSource"/>
-      <reference ref="OpenInRightSplit"/>
-      <reference ref="TreeNodeExclusion"/>
-      <action id="UsageView.Remove" class="com.intellij.usages.actions.RemoveUsageAction" use-shortcut-of="$Cut"/>
-      <separator/>
-      <action id="UsageView.ShowRecentFindUsages" class="com.intellij.find.impl.ShowRecentFindUsagesAction" use-shortcut-of="ShowSearchHistory"/>
-      <separator/>
-      <reference ref="RunContextGroup"/>
-      <separator/>
-      <reference ref="ExportToTextFile"/>
-    </group>
+    <!--<group id="UsageView.Popup">-->
+    <!--  <action id="UsageView.Rerun" class="com.intellij.usages.actions.RerunSearchAction" icon="AllIcons.Actions.Refresh" use-shortcut-of="Rerun"/>-->
+    <!--  <separator/>-->
+    <!--  <reference ref="EditSource"/>-->
+    <!--  <reference ref="OpenInRightSplit"/>-->
+    <!--  <reference ref="TreeNodeExclusion"/>-->
+    <!--  <action id="UsageView.Remove" class="com.intellij.usages.actions.RemoveUsageAction" use-shortcut-of="$Cut"/>-->
+    <!--  <separator/>-->
+    <!--  <action id="UsageView.ShowRecentFindUsages" class="com.intellij.find.impl.ShowRecentFindUsagesAction" use-shortcut-of="ShowSearchHistory"/>-->
+    <!--  <separator/>-->
+    <!--  <reference ref="RunContextGroup"/>-->
+    <!--  <separator/>-->
+    <!--  <reference ref="ExportToTextFile"/>-->
+    <!--</group>-->
 
     <action id="NewElementSamePlace" class="com.intellij.ide.actions.NewElementSamePlaceAction"/>
 
@@ -918,13 +918,13 @@
       <reference ref="EditSource"/>
       <separator/>
       <reference ref="FindUsages"/>
-      <reference ref="RefactoringMenu"/>
+      <!--<reference ref="RefactoringMenu"/>-->
       <separator/>
-      <reference ref="RunContextPopupGroup"/>
+      <!--<reference ref="RunContextPopupGroup"/>-->
       <reference ref="SplitRevealGroup"/>
       <separator/>
-      <reference ref="ReformatCode"/>
-      <reference ref="OptimizeImports"/>
+      <!--<reference ref="ReformatCode"/>-->
+      <!--<reference ref="OptimizeImports"/>-->
       <reference ref="$Delete"/>
       <separator/>
       <reference ref="VersionControlsGroup"/>
@@ -935,20 +935,20 @@
       <reference ref="CompareFileWithEditor"/>
     </group>
 
-    <group id="EditorPopupMenuDebug">
-      <separator/>
-      <reference ref="EvaluateExpression"/>
-      <reference ref="RunToCursor"/>
-      <reference ref="ForceRunToCursor"/>
-      <reference ref="Debugger.AddToWatch"/>
-      <reference ref="Debugger.AddInlineWatch"/>
-      <reference ref="Debugger.EvaluateInConsole"/>
-      <separator/>
-      <group id="EditorPopupMenuDebugHotSwap">
-        <separator/>
-      </group>
-      <add-to-group group-id="EditorLangPopupMenu" relative-to-action="EditorPopupMenu.Run" anchor="before"/>
-    </group>
+    <!--<group id="EditorPopupMenuDebug">-->
+    <!--  <separator/>-->
+    <!--  <reference ref="EvaluateExpression"/>-->
+    <!--  <reference ref="RunToCursor"/>-->
+    <!--  <reference ref="ForceRunToCursor"/>-->
+    <!--  <reference ref="Debugger.AddToWatch"/>-->
+    <!--  <reference ref="Debugger.AddInlineWatch"/>-->
+    <!--  <reference ref="Debugger.EvaluateInConsole"/>-->
+    <!--  <separator/>-->
+    <!--  <group id="EditorPopupMenuDebugHotSwap">-->
+    <!--    <separator/>-->
+    <!--  </group>-->
+    <!--  <add-to-group group-id="EditorLangPopupMenu" relative-to-action="EditorPopupMenu.Run" anchor="before"/>-->
+    <!--</group>-->
 
     <group id="ConsoleView.PopupMenu">
       <reference ref="ConsoleEditorPopupMenu"/>
@@ -1071,10 +1071,10 @@
     <action id="RenameFile" class="com.intellij.refactoring.actions.RenameFileAction">
       <add-to-group group-id="EditorTabPopupMenuEx" anchor="last"/>
     </action>
-    <action id="UpdateRunningApplication" class="com.intellij.execution.update.UpdateRunningApplicationAction">
-      <keyboard-shortcut first-keystroke="control F10" keymap="$default"/>
-      <add-to-group group-id="DebugReloadGroup" anchor="last"/>
-    </action>
+    <!--<action id="UpdateRunningApplication" class="com.intellij.execution.update.UpdateRunningApplicationAction">-->
+    <!--  <keyboard-shortcut first-keystroke="control F10" keymap="$default"/>-->
+    <!--  <add-to-group group-id="DebugReloadGroup" anchor="last"/>-->
+    <!--</action>-->
 
     <!--region TouchBar-->
     <group id="TouchBarEditorSearch">
@@ -1118,9 +1118,9 @@
       <add-to-group group-id="FileChooserToolbar" anchor="after" relative-to-action="FileChooser.GotoDesktop"/>
     </action>
 
-    <action class="com.intellij.ide.hierarchy.actions.ActivateHierarchyToolWindowAction" id="ActivateHierarchyToolWindow">
-      <add-to-group group-id="ActivateToolWindowActions"/>
-    </action>
+    <!--<action class="com.intellij.ide.hierarchy.actions.ActivateHierarchyToolWindowAction" id="ActivateHierarchyToolWindow">-->
+    <!--  <add-to-group group-id="ActivateToolWindowActions"/>-->
+    <!--</action>-->
 
     <action id="SwitchFileBasedIndexStorageAction"
             class="com.intellij.util.indexing.impl.storage.SwitchFileBasedIndexStorageAction"/>

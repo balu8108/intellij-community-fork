@@ -160,32 +160,32 @@
     </extensionPoint>
   </extensionPoints>
 
-  <extensions defaultExtensionNs="training">
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.LineCommentingSuggester"/>
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.IntroduceVariableSuggester"/>
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.CopyPasteSuggester"/>
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.QuickEvaluateSuggester"/>
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.SurroundWithSuggester"/>
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.UnwrapSuggester"/>
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.FileStructureSuggester"/>
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.CompletionPopupSuggester"/>
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.ReplaceCompletionSuggester"/>
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.RunToCursorSuggester"/>
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.EditBreakpointSuggester"/>
-    <ifs.suggester
-      implementation="training.featuresSuggester.suggesters.MuteBreakpointsSuggester"/>
-  </extensions>
+  <!--<extensions defaultExtensionNs="training">-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.LineCommentingSuggester"/>-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.IntroduceVariableSuggester"/>-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.CopyPasteSuggester"/>-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.QuickEvaluateSuggester"/>-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.SurroundWithSuggester"/>-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.UnwrapSuggester"/>-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.FileStructureSuggester"/>-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.CompletionPopupSuggester"/>-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.ReplaceCompletionSuggester"/>-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.RunToCursorSuggester"/>-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.EditBreakpointSuggester"/>-->
+  <!--  <ifs.suggester-->
+  <!--    implementation="training.featuresSuggester.suggesters.MuteBreakpointsSuggester"/>-->
+  <!--</extensions>-->
 
   <extensions defaultExtensionNs="com.intellij">
     <applicationService serviceImplementation="training.featuresSuggester.settings.FeatureSuggesterSettings"/>
