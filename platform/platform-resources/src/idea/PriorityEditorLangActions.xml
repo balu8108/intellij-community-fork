@@ -1,12 +1,12 @@
 <!-- these must be declared before standard EnterAction and TabAction to prioritize the shortcut -->
 <idea-plugin>
-  <!--<actions>-->
+  <actions>
   <!--  <group id="LookupActions">-->
   <!--    <action id="SelectVirtualTemplateElement" class="com.intellij.refactoring.rename.inplace.SelectVirtualTemplateElement" />-->
   <!--    <action id="EditorChooseLookupItem" class="com.intellij.codeInsight.lookup.impl.actions.ChooseItemAction$FocusedOnly"/>-->
   <!--    <action id="EditorChooseLookupItemReplace" class="com.intellij.codeInsight.lookup.impl.actions.ChooseItemAction$Replacing"/>-->
-  <!--    <action id="EditorChooseLookupItemCompleteStatement" class="com.intellij.codeInsight.lookup.impl.actions.ChooseItemAction$CompletingStatement"-->
-  <!--            use-shortcut-of="EditorCompleteStatement"/>-->
+      <action id="EditorChooseLookupItemCompleteStatement" class="com.intellij.codeInsight.lookup.impl.actions.ChooseItemAction$CompletingStatement"
+              use-shortcut-of="EditorCompleteStatement"/>
   <!--    <action id="EditorChooseLookupItemDot" class="com.intellij.codeInsight.lookup.impl.actions.ChooseItemAction$ChooseWithDot"/>-->
 
   <!--    <action id="ExpandLiveTemplateByTab" class="com.intellij.codeInsight.template.impl.editorActions.ExpandLiveTemplateByTabAction"/>-->
@@ -25,5 +25,5 @@
   <!--  <action id="EditorLookupDown" class="com.intellij.codeInsight.lookup.impl.LookupActionHandler$DownAction"/>-->
   <!--  <action id="EditorLookupSelectionUp" class="com.intellij.codeInsight.lookup.impl.LookupActionHandler$UpInLookupAction"/>-->
   <!--  <action id="EditorLookupSelectionDown" class="com.intellij.codeInsight.lookup.impl.LookupActionHandler$DownInLookupAction"/>-->
-  <!--</actions>-->
+  </actions>
 </idea-plugin>

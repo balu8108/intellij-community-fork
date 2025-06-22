@@ -56,7 +56,7 @@
     <!--  </action>-->
     <!--  <action id="EditorCodeBlockStartWithSelection" class="com.intellij.codeInsight.editorActions.CodeBlockStartWithSelectionAction"/>-->
     <!--  <action id="EditorCodeBlockEndWithSelection" class="com.intellij.codeInsight.editorActions.CodeBlockEndWithSelectionAction"/>-->
-    <!--  <action id="EditorCompleteStatement" class="com.intellij.codeInsight.editorActions.smartEnter.SmartEnterAction"/>-->
+      <action id="EditorCompleteStatement" class="com.intellij.codeInsight.editorActions.smartEnter.SmartEnterAction"/>
 
     <!--  <add-to-group group-id="EditorActions" anchor="last"/>-->
     <!--</group>-->
@@ -331,13 +331,13 @@
       <separator/>
 
       <!--<group id="CodeCompletionGroup" class="com.intellij.codeInsight.completion.actions.CodeCompletionGroup" popup="true">-->
-      <!--  <action id="CodeCompletion" class="com.intellij.codeInsight.completion.actions.CodeCompletionAction"/>-->
+        <action id="CodeCompletion" class="com.intellij.codeInsight.completion.actions.CodeCompletionAction"/>
       <!--  <action id="SmartTypeCompletion" class="com.intellij.codeInsight.completion.actions.SmartCodeCompletionAction">-->
       <!--    <synonym key="action.SmartTypeCompletion.synonym"/>-->
       <!--    <synonym key="action.SmartTypeCompletion.synonym2"/>-->
       <!--  </action>-->
       <!--  <separator/>-->
-      <!--  <reference ref="EditorCompleteStatement"/>-->
+        <reference ref="EditorCompleteStatement"/>
       <!--  <separator/>-->
       <!--  <action id="HippieCompletion" class="com.intellij.codeInsight.completion.actions.HippieCompletionAction"/>-->
       <!--  <action id="HippieBackwardCompletion" class="com.intellij.codeInsight.completion.actions.HippieBackwardCompletionAction"/>-->
