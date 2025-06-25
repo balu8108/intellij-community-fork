@@ -137,6 +137,7 @@ open class ToolWindowManagerImpl @NonInjectable @TestOnly internal constructor(
     : this(project, isNewUi = ExperimentalUI.isNewUI(), isEdtRequired = true, coroutineScope = coroutineScope)
 
   init {
+    //println("ToolWindowManagerImpl.init project=${project.name}, isNewUi=$isNewUi, isEdtRequired=$isEdtRequired")
     if (project.isDefault) {
       waiterForSecondPress = null
     }
@@ -1137,6 +1138,7 @@ open class ToolWindowManagerImpl @NonInjectable @TestOnly internal constructor(
     val task = preparedTask.task
 
     LOG.debug { "registerToolWindow($task)" }
+    //println("registerToolWindow :id=${task.id}, plugin=${task.pluginDescriptor?.pluginId?.idString}")
 
     if (idToEntry.containsKey(task.id)) {
       throw IllegalArgumentException("window with id=\"${task.id}\" is already registered")
@@ -1208,6 +1210,8 @@ open class ToolWindowManagerImpl @NonInjectable @TestOnly internal constructor(
     }
 
     val stripeButton = if (preparedTask.isButtonNeeded) {
+      //println("Button is created for `${task.id}`" +
+      //        "(isShowStripeButton: ${info.isShowStripeButton}, isAvailable: ${task.shouldBeAvailable})")
       buttonManager.createStripeButton(toolWindow = toolWindow, info = infoSnapshot, task = RegisterToolWindowTask(task))
     }
     else {

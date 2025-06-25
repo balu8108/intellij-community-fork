@@ -325,6 +325,7 @@ internal suspend fun computeToolWindowBeans(project: Project): List<RegisterTool
       async {
         try {
           val bean = item.instance ?: return@async null
+          //println("Processing tool window ${item.id},${item.instance?.id},${item.instance?.isDoNotActivateOnStart},${item.instance?.secondary} from plugin ${item.pluginDescriptor.pluginId}")
           val condition = bean.getCondition(item.pluginDescriptor)
           if (condition == null || condition.value(project)) {
             beanToTask(project = project, bean = bean, plugin = item.pluginDescriptor)

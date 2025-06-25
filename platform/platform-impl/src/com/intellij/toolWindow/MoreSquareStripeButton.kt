@@ -68,7 +68,7 @@ internal class MoreSquareStripeButton(toolWindowToolbar: ToolWindowToolbar,
   }
 
   override fun isAvailable(project: Project): Boolean {
-    return super.isAvailable(project) && ToolWindowManagerEx.getInstanceEx(project).getMoreButtonSide() == side
+    return false
   }
 
   override fun checkSkipPressForEvent(e: MouseEvent) = e.button != MouseEvent.BUTTON1

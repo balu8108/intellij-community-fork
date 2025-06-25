@@ -39,6 +39,7 @@ import kotlin.coroutines.CoroutineContext
 import kotlin.system.exitProcess
 
 fun main(rawArgs: Array<String>) {
+  println("Welcome to IntelliJ IDEA Balaji!")
   val startupTimings = ArrayList<Any>(12)
   val startTimeNano = System.nanoTime()
   val startTimeUnixNano = System.currentTimeMillis() * 1000000

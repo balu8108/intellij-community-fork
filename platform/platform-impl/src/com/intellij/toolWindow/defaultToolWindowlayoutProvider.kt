@@ -236,16 +236,15 @@ internal class DefaultToolWindowLayoutBuilderImpl : DefaultToolWindowLayoutBuild
             weight = 0.25f
             contentUiType = ToolWindowDescriptor.ToolWindowContentUiType.COMBO
           }
+          addOrUpdate("Commit") { weight = 0.25f }
         }
         ToolWindowDescriptor.ToolWindowAnchor.RIGHT -> {
           addOrUpdate("Notifications") { weight = 0.25f }
         }
         ToolWindowDescriptor.ToolWindowAnchor.BOTTOM -> {
-          addOrUpdate(id = "Version Control")
-          addOrUpdate(id = "Find")
-          addOrUpdate(id = "Run")
-          addOrUpdate(id = "Debug") { weight = 0.4f }
-          addOrUpdate(id = "Inspection") { weight = 0.4f}
+          addOrUpdate("TODO")
+          addOrUpdate("Version Control")
+          addOrUpdate("Terminal")
         }
       }
     }
@@ -259,29 +258,17 @@ internal class DefaultToolWindowLayoutBuilderImpl : DefaultToolWindowLayoutBuild
             contentUiType = ToolWindowDescriptor.ToolWindowContentUiType.COMBO
           }
           addOrUpdate("Commit") { weight = 0.25f }
-          addOrUpdate("Structure") {
-            weight = 0.25f
-            isSplit = true
-          }
         }
         ToolWindowDescriptor.ToolWindowAnchor.RIGHT -> {
           addOrUpdate("Notifications") {
             weight = 0.25f
             contentUiType = ToolWindowDescriptor.ToolWindowContentUiType.COMBO
           }
-          addOrUpdate("AIAssistant") { weight = 0.25f }
-          addOrUpdate("Database") { weight = 0.25f }
-          addOrUpdate("Gradle") { weight = 0.25f }
-          addOrUpdate("Maven") { weight = 0.25f }
         }
         ToolWindowDescriptor.ToolWindowAnchor.BOTTOM -> {
+          addOrUpdate("TODO")
           addOrUpdate("Version Control")
-          // Auto-Build
-          addOrUpdate("Problems")
-          // Problems
-          addOrUpdate("Problems View")
           addOrUpdate("Terminal")
-          addOrUpdate("Services")
         }
       }
     }
