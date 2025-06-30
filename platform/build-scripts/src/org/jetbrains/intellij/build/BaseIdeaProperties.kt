@@ -13,59 +13,115 @@ import org.jetbrains.intellij.build.kotlin.KotlinPluginBuilder
  * See also [DEFAULT_BUNDLED_PLUGINS].
  */
 @Suppress("SpellCheckingInspection")
-val IDEA_BUNDLED_PLUGINS: PersistentList<String> = DEFAULT_BUNDLED_PLUGINS + sequenceOf(
-  JavaPluginLayout.MAIN_MODULE_NAME,
-  "intellij.java.ide.customization",
+//val IDEA_BUNDLED_PLUGINS: PersistentList<String> = DEFAULT_BUNDLED_PLUGINS + sequenceOf(
+//  JavaPluginLayout.MAIN_MODULE_NAME,
+//  "intellij.java.ide.customization",
+//  "intellij.copyright",
+//  "intellij.properties",
+//  "intellij.terminal",
+//  "intellij.textmate",
+//  "intellij.editorconfig.plugin",
+//  "intellij.settingsSync",
+//  "intellij.configurationScript",
+//  "intellij.json",
+//  "intellij.yaml",
+//  "intellij.html.tools",
+//  "intellij.tasks.core",
+//  "intellij.repository.search",
+//  "intellij.maven",
+//  "intellij.gradle",
+//  "intellij.android.gradle.declarative.lang.ide",
+//  "intellij.android.gradle.dsl",
+//  "intellij.gradle.java",
+//  "intellij.vcs.git",
+//  "intellij.vcs.git.commit.modal",
+//  "intellij.vcs.svn",
+//  "intellij.vcs.hg",
+//  "intellij.groovy",
+//  "intellij.junit",
+//  "intellij.testng",
+//  "intellij.java.i18n",
+//  "intellij.java.byteCodeViewer",
+//  "intellij.java.coverage",
+//  "intellij.java.decompiler",
+//  "intellij.eclipse",
+//  "intellij.platform.langInjection",
+//  "intellij.java.debugger.streams",
+//  "intellij.completionMlRanking",
+//  "intellij.completionMlRankingModels",
+//  "intellij.statsCollector",
+//  "intellij.sh",
+//  "intellij.markdown",
+//  "intellij.mcpserver",
+//  "intellij.webp",
+//  "intellij.grazie",
+//  "intellij.featuresTrainer",
+//  "intellij.searchEverywhereMl",
+//  "intellij.marketplaceMl",
+//  "intellij.toml",
+//  KotlinPluginBuilder.MAIN_KOTLIN_PLUGIN_MODULE,
+//  "intellij.keymap.eclipse",
+//  "intellij.keymap.visualStudio",
+//  "intellij.keymap.netbeans",
+//  "intellij.performanceTesting",
+//  "intellij.turboComplete",
+//  "intellij.compose.ide.plugin",
+//)
+
+val IDEA_BUNDLED_PLUGINS: PersistentList<String> = persistentListOf(
+  "intellij.platform.images",
+) + sequenceOf(
+  //"intellij.java.ide.customization",
   "intellij.copyright",
-  "intellij.properties",
+  //"intellij.properties",
   "intellij.terminal",
-  "intellij.textmate",
-  "intellij.editorconfig.plugin",
+  //"intellij.textmate",
+  //"intellij.editorconfig.plugin",
   "intellij.settingsSync",
-  "intellij.configurationScript",
-  "intellij.json",
-  "intellij.yaml",
-  "intellij.html.tools",
+  //"intellij.configurationScript",
+  //"intellij.json",
+  //"intellij.yaml",
+  //"intellij.html.tools",
   "intellij.tasks.core",
-  "intellij.repository.search",
-  "intellij.maven",
-  "intellij.gradle",
-  "intellij.android.gradle.declarative.lang.ide",
-  "intellij.android.gradle.dsl",
-  "intellij.gradle.java",
+  //"intellij.repository.search",
+  //"intellij.maven",
+  //"intellij.gradle",
+  //"intellij.android.gradle.declarative.lang.ide",
+  //"intellij.android.gradle.dsl",
+  //"intellij.gradle.java",
   "intellij.vcs.git",
   "intellij.vcs.git.commit.modal",
   "intellij.vcs.svn",
   "intellij.vcs.hg",
-  "intellij.groovy",
-  "intellij.junit",
-  "intellij.testng",
-  "intellij.java.i18n",
-  "intellij.java.byteCodeViewer",
-  "intellij.java.coverage",
-  "intellij.java.decompiler",
-  "intellij.eclipse",
-  "intellij.platform.langInjection",
-  "intellij.java.debugger.streams",
-  "intellij.completionMlRanking",
-  "intellij.completionMlRankingModels",
+  //"intellij.groovy",
+  //"intellij.junit",
+  //"intellij.testng",
+  //"intellij.java.i18n",
+  //"intellij.java.byteCodeViewer",
+  //"intellij.java.coverage",
+  //"intellij.java.decompiler",
+  //"intellij.eclipse",
+  //"intellij.platform.langInjection",
+  //"intellij.java.debugger.streams",
+  //"intellij.completionMlRanking",
+  //"intellij.completionMlRankingModels",
   "intellij.statsCollector",
   "intellij.sh",
-  "intellij.markdown",
-  "intellij.mcpserver",
-  "intellij.webp",
-  "intellij.grazie",
+  //"intellij.markdown",
+  //"intellij.mcpserver",
+  //"intellij.webp",
+  //"intellij.grazie",
   "intellij.featuresTrainer",
-  "intellij.searchEverywhereMl",
-  "intellij.marketplaceMl",
-  "intellij.toml",
-  KotlinPluginBuilder.MAIN_KOTLIN_PLUGIN_MODULE,
+  //"intellij.searchEverywhereMl",
+  //"intellij.marketplaceMl",
+  //"intellij.toml",
+  //KotlinPluginBuilder.MAIN_KOTLIN_PLUGIN_MODULE,
   "intellij.keymap.eclipse",
   "intellij.keymap.visualStudio",
   "intellij.keymap.netbeans",
-  "intellij.performanceTesting",
-  "intellij.turboComplete",
-  "intellij.compose.ide.plugin",
+  //"intellij.performanceTesting",
+  //"intellij.turboComplete",
+  //"intellij.compose.ide.plugin",
 )
 
 val CE_CLASS_VERSIONS: Map<String, String> = mapOf(
@@ -122,26 +178,26 @@ val TEST_FRAMEWORK_WITH_JAVA_RT: (PlatformLayout, BuildContext) -> Unit = { layo
  */
 abstract class BaseIdeaProperties : JetBrainsProductProperties() {
   init {
-    productLayout.addPlatformSpec(TEST_FRAMEWORK_LAYOUT_CUSTOMIZER)
+    //productLayout.addPlatformSpec(TEST_FRAMEWORK_LAYOUT_CUSTOMIZER)
     productLayout.addPlatformSpec { layout, _ ->
       layout.withModule("intellij.java.ide.resources")
 
-      if (!productLayout.productApiModules.contains("intellij.jsp.base")) {
-        layout.withModule("intellij.jsp.base")
-      }
+      //if (!productLayout.productApiModules.contains("intellij.jsp.base")) {
+      //  layout.withModule("intellij.jsp.base")
+      //}
 
-      for (moduleName in arrayOf(
-        "intellij.java.testFramework",
-        "intellij.java.testFramework.shared",
-        "intellij.platform.debugger.testFramework",
-        "intellij.platform.uast.testFramework",
-      )) {
-        if (!productLayout.productApiModules.contains(moduleName) && !productLayout.productImplementationModules.contains(moduleName)) {
-          layout.withModule(moduleName, TEST_FRAMEWORK_JAR)
-        }
-      }
+      //for (moduleName in arrayOf(
+      //  "intellij.java.testFramework",
+      //  "intellij.java.testFramework.shared",
+      //  "intellij.platform.debugger.testFramework",
+      //  "intellij.platform.uast.testFramework",
+      //)) {
+      //  if (!productLayout.productApiModules.contains(moduleName) && !productLayout.productImplementationModules.contains(moduleName)) {
+      //    layout.withModule(moduleName, TEST_FRAMEWORK_JAR)
+      //  }
+      //}
       //todo currently intellij.platform.testFramework included into idea.jar depends on this jar so it cannot be moved to java plugin
-      layout.withModule("intellij.java.rt", "idea_rt.jar")
+      //layout.withModule("intellij.java.rt", "idea_rt.jar")
       // for compatibility with user projects which refer to IDEA_HOME/lib/annotations.jar
       layout.withProjectLibrary("jetbrains-annotations", "annotations.jar")
 
@@ -167,6 +223,6 @@ abstract class BaseIdeaProperties : JetBrainsProductProperties() {
     productLayout.compatiblePluginsToIgnore = persistentListOf(
       JavaPluginLayout.MAIN_MODULE_NAME,
     )
-    modulesToCompileTests = persistentListOf("intellij.platform.jps.build.tests")
+    //modulesToCompileTests = persistentListOf("intellij.platform.jps.build.tests")
   }
 }

@@ -23,11 +23,11 @@ internal object OpenSourceCommunityInstallersBuildTarget {
 
     runBlocking(Dispatchers.Default) {
       val context = createCommunityBuildContext(options)
-      CompilationTasks.create(context).compileModules(moduleNames = null, includingTestsInModules = listOf("intellij.platform.jps.build.tests"))
+      CompilationTasks.create(context).compileModules(moduleNames = null)
       buildDistributions(context)
-      spanBuilder("build standalone JPS").use {
-        buildCommunityStandaloneJpsBuilder(targetDir = context.paths.artifactDir.resolve("jps"), context)
-      }
+      //spanBuilder("build standalone JPS").use {
+      //  buildCommunityStandaloneJpsBuilder(targetDir = context.paths.artifactDir.resolve("jps"), context)
+      //}
     }
   }
 }

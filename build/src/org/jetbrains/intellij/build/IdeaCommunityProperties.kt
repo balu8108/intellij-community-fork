@@ -21,16 +21,16 @@ internal suspend fun createCommunityBuildContext(
 open class IdeaCommunityProperties(private val communityHomeDir: Path) : BaseIdeaProperties() {
   companion object {
     val MAVEN_ARTIFACTS_ADDITIONAL_MODULES: PersistentList<String> = persistentListOf(
-      "intellij.tools.jps.build.standalone",
-      "intellij.devkit.runtimeModuleRepository.jps",
-      "intellij.devkit.jps",
+      //"intellij.tools.jps.build.standalone",
+      //"intellij.devkit.runtimeModuleRepository.jps",
+      //"intellij.devkit.jps",
       "intellij.idea.community.build.tasks",
-      "intellij.platform.debugger.testFramework",
+      //"intellij.platform.debugger.testFramework",
       "intellij.platform.vcs.testFramework",
-      "intellij.platform.externalSystem.testFramework",
-      "intellij.maven.testFramework",
-      "intellij.tools.reproducibleBuilds.diff",
-      "intellij.space.java.jps",
+      //"intellij.platform.externalSystem.testFramework",
+      //"intellij.maven.testFramework",
+      //"intellij.tools.reproducibleBuilds.diff",
+      //"intellij.space.java.jps",
       *JewelMavenArtifacts.STANDALONE.keys.toTypedArray(),
     )
   }
@@ -49,7 +49,7 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : BaseIde
       "intellij.idea.community.customization",
     )
     productLayout.bundledPluginModules = IDEA_BUNDLED_PLUGINS + sequenceOf(
-      "intellij.javaFX.community",
+      //"intellij.javaFX.community",
       "intellij.vcs.github.community",
       "intellij.vcs.gitlab.community"
     )
@@ -57,15 +57,15 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : BaseIde
     productLayout.prepareCustomPluginRepositoryForPublishedPlugins = false
     productLayout.buildAllCompatiblePlugins = false
     productLayout.pluginLayouts = CommunityRepositoryModules.COMMUNITY_REPOSITORY_PLUGINS.addAll(listOf(
-      JavaPluginLayout.javaPlugin(),
-      CommunityRepositoryModules.androidPlugin(allPlatforms = true),
-      CommunityRepositoryModules.groovyPlugin(),
+      //JavaPluginLayout.javaPlugin(),
+      //CommunityRepositoryModules.androidPlugin(allPlatforms = true),
+      //CommunityRepositoryModules.groovyPlugin(),
     ))
 
-    productLayout.addPlatformSpec { layout, _ ->
-      layout.withModule("intellij.platform.duplicates.analysis")
-      layout.withModule("intellij.platform.structuralSearch")
-    }
+    //productLayout.addPlatformSpec { layout, _ ->
+    //  layout.withModule("intellij.platform.duplicates.analysis")
+    //  layout.withModule("intellij.platform.structuralSearch")
+    //}
     
     productLayout.skipUnresolvedContentModules = true
 
@@ -94,14 +94,14 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : BaseIde
       JewelMavenArtifacts.validate(context, artifacts)
     }
 
-    versionCheckerConfig = CE_CLASS_VERSIONS
+    versionCheckerConfig = emptyMap()
     baseDownloadUrl = "https://download.jetbrains.com/idea/"
     buildDocAuthoringAssets = true
 
-    @Suppress("SpellCheckingInspection")
-    qodanaProductProperties = QodanaProductProperties("QDJVMC", "Qodana Community for JVM")
-    additionalVmOptions = persistentListOf("-Dllm.show.ai.promotion.window.on.start=false")
-    enableKotlinPluginK2ByDefault()
+    //@Suppress("SpellCheckingInspection")
+    //qodanaProductProperties = QodanaProductProperties("QDJVMC", "Qodana Community for JVM")
+    //additionalVmOptions = persistentListOf("-Dllm.show.ai.promotion.window.on.start=false")
+    //enableKotlinPluginK2ByDefault()
   }
 
   override suspend fun copyAdditionalFiles(context: BuildContext, targetDir: Path) {
@@ -152,10 +152,10 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : BaseIde
 
     override fun getRootDirectoryName(appInfo: ApplicationInfoProperties, buildNumber: String): String = "idea-IC-$buildNumber"
 
-    override fun generateExecutableFilesPatterns(context: BuildContext, includeRuntime: Boolean, arch: JvmArchitecture, targetLibcImpl: LibcImpl): Sequence<String> =
-      super.generateExecutableFilesPatterns(context, includeRuntime, arch, targetLibcImpl)
-        .plus(KotlinBinaries.kotlinCompilerExecutables)
-        .filterNot { it == "plugins/**/*.sh" }
+    override fun generateExecutableFilesPatterns(context: BuildContext, includeRuntime: Boolean, arch: JvmArchitecture, targetLibcImpl: LibcImpl): Sequence<String> = emptySequence()
+      //super.generateExecutableFilesPatterns(context, includeRuntime, arch, targetLibcImpl)
+      //  .plus(KotlinBinaries.kotlinCompilerExecutables)
+      //  .filterNot { it == "plugins/**/*.sh" }
   }
 
   protected open inner class CommunityMacDistributionCustomizer : MacDistributionCustomizer() {
@@ -163,8 +163,9 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : BaseIde
       icnsPath = "${communityHomeDir}/build/conf/ideaCE/mac/images/idea.icns"
       icnsPathForEAP = "${communityHomeDir}/build/conf/ideaCE/mac/images/communityEAP.icns"
       urlSchemes = listOf("idea")
-      associateIpr = true
-      fileAssociations = FileAssociation.from("java", "groovy", "kt", "kts")
+      associateIpr = false
+      fileAssociations = emptyList()
+        //FileAssociation.from("java", "groovy", "kt", "kts")
       bundleIdentifier = "com.jetbrains.intellij.ce"
       dmgImagePath = "${communityHomeDir}/build/conf/ideaCE/mac/images/dmg_background.tiff"
     }
@@ -173,10 +174,10 @@ open class IdeaCommunityProperties(private val communityHomeDir: Path) : BaseIde
       if (appInfo.isEAP) "IntelliJ IDEA ${appInfo.majorVersion}.${appInfo.minorVersionMainPart} CE EAP.app"
       else "IntelliJ IDEA CE.app"
 
-    override fun generateExecutableFilesPatterns(context: BuildContext, includeRuntime: Boolean, arch: JvmArchitecture): Sequence<String> =
-      super.generateExecutableFilesPatterns(context, includeRuntime, arch)
-        .plus(KotlinBinaries.kotlinCompilerExecutables)
-        .filterNot { it == "plugins/**/*.sh" }
+    override fun generateExecutableFilesPatterns(context: BuildContext, includeRuntime: Boolean, arch: JvmArchitecture): Sequence<String> = emptySequence()
+      //super.generateExecutableFilesPatterns(context, includeRuntime, arch)
+      //  .plus(KotlinBinaries.kotlinCompilerExecutables)
+      //  .filterNot { it == "plugins/**/*.sh" }
   }
 
   override fun getSystemSelector(appInfo: ApplicationInfoProperties, buildNumber: String): String =
