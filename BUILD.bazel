@@ -15,6 +15,11 @@ genrule(
 
     mkdir -p $(RULEDIR)/GitClient.app/Contents/MacOS
     mkdir -p $(RULEDIR)/GitClient.app/Contents/Resources
+    mkdir -p $(RULEDIR)/GitClient.app/Contents/jbr
+
+    # Copy JetBrains Runtime into the .app
+    cp -R /Users/balachandaratluri/Library/Java/JetBrainsRuntime/jbr-17.0.14/Contents/Home/* \
+          $(RULEDIR)/GitClient.app/Contents/jbr/
 
     cat > $(RULEDIR)/GitClient.app/Contents/Info.plist <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
@@ -32,8 +37,9 @@ genrule(
 EOF
 
     echo '#!/bin/bash' > $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
-    echo 'exec /usr/bin/java \\' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
-    echo '  -Didea.home.path=/Users/balachandaratluri/GolandProjects/intellij-community-fork \\' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
+    echo 'DIR="$$(cd "$$(dirname "$$0")" && pwd)"' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
+    echo 'exec "$$DIR/../jbr/bin/java" \\' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
+    echo '  -Didea.home.path=/Users/balachandaratluri/IdeaProjects/intellij-community-fork \\' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
     echo '  --add-opens=java.base/java.io=ALL-UNNAMED \\' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
     echo '  --add-opens=java.base/java.lang=ALL-UNNAMED \\' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
     echo '  --add-opens=java.base/java.lang.ref=ALL-UNNAMED \\' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
@@ -84,7 +90,7 @@ EOF
     echo '  --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED \\' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
     echo '  --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED \\' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
     echo '  --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED \\' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
-    echo '  -jar "$$(dirname "$$0")/../Resources/main.jar"' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
+    echo '  -jar "$$DIR/../Resources/main.jar"' >> $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
 
     chmod +x $(RULEDIR)/GitClient.app/Contents/MacOS/launcher
 
